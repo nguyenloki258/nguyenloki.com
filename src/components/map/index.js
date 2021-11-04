@@ -5,6 +5,7 @@ import React, { useRef, useState } from "react";
 import ReactMapGL, { Marker } from "@goongmaps/goong-map-react";
 const GOONG_MAPTILES_KEY = "1YVQoTkZWUdNrHJOUf3jEXI1CxlWqvUfghcn6tRa";
 
+import { StaticImage } from "gatsby-plugin-image";
 const FIXED_POINT = [
   {
     id: 1,
@@ -13,7 +14,7 @@ const FIXED_POINT = [
     latitude: 20.951629,
     longitude: 106.058693,
     code: "1",
-    src: "images/points/loki.jpg"
+    src: "../../images/points/loki.jpg"
   },
   {
     id: 2,
@@ -22,7 +23,7 @@ const FIXED_POINT = [
     latitude: 21.01493,
     longitude: 106.38899,
     code: "2",
-    src: "images/points/nieu.jpg"
+    src: "../../images/points/nieu.jpg"
   }
 ];
 
@@ -92,7 +93,7 @@ const Map = () => {
                   </div>
                 )}
                 <div className="marker-circle">
-                  <img src={point.src} alt={point.code} />
+                  <StaticImage src={point.src} alt={point.code} />
                 </div>
               </div>
             </Marker>

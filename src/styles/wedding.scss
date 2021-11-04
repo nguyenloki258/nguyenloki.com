@@ -42,7 +42,6 @@
         }
   
         .menu-panel {
-          opacity: 0;
           display: grid;
           margin-left: 1rem;
           padding: 1rem;
@@ -68,11 +67,7 @@
             }
           }
         }
-        &:hover {
-          .menu-panel {
-            opacity: 1;
-          }
-        }
+        
       }
       .music {
         position: fixed;
@@ -89,16 +84,10 @@
         }
   
         .music-panel {
-          opacity: 1;height: 0;
+          height: 0;
           overflow: hidden;
           // position: absolute;
           
-        }
-        &:hover {
-          .music-panel {
-            opacity: 1;height: unset;
-            transition: all 1s ;
-          }
         }
       }
       @include desktop-xl {

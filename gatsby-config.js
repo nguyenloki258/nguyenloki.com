@@ -6,7 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  siteMetadata: require("./site-meta-data.json"),
+  siteMetadata: require("./_data/site-meta-data.json"),
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -46,8 +46,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Delog GatbsyJS Starter`,
-        short_name: `Delog`,
+        name: `Loki Blog`,
+        short_name: `nguyenloki.com`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#381696`,
@@ -61,6 +61,9 @@ module.exports = {
     "gatsby-plugin-dark-mode",
     // siteURL is a must for sitemap generation
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, 
     `gatsby-plugin-offline`
   ]
 };

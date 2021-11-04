@@ -11,6 +11,7 @@ import Info from "../components/info";
 import Schedule from "../components/schedule";
 import Contact from "../components/contact";
 import Invitation from "../components/invitation";
+import { StaticImage } from "gatsby-plugin-image";
 
 
 
@@ -22,6 +23,9 @@ const WeddingPage = () => {
   const contactRef = useRef();
   const albumRef = useRef();
 
+  const [page, setPage] = useState(0);
+  const [showMenu, setShowMenu] = useState(false);
+  const [showMusic, setShowMusic] = useState(false);
   const [page, setPage] = useState(0);
   const onScroll = e => {
     const scrollTop = fullPage.current.scrollTop;
@@ -62,53 +66,59 @@ const WeddingPage = () => {
       </div>
       <div className={`right-panel`}>
         <div className="menu">
-          <div className="menu-btn">
-            <img
+          <div className="menu-btn" onClick={setShowMenu(!showMenu)}>
+            <StaticImage
               alt="menu"
               src="https://img.icons8.com/color/48/ffffff/circled-menu.png"
             />
           </div>
-          <div className="menu-panel">
-            <div className="item" role="button" aria-hidden="true" onClick={(e) => goto("album")}>
-              <img
-                alt="album"
-                src="https://img.icons8.com/color/48/ffffff/google-photos-new.png"
-              />
-              <span>Album ảnh</span>
+          {showMenu &&
+            <div className="menu-panel">
+              <div className="item" role="button" aria-hidden="true" onClick={(e) => goto("album")}>
+                <StaticImage
+                  alt="album"
+                  src="https://img.icons8.com/color/48/ffffff/google-photos-new.png"
+                />
+                <span>Album ảnh</span>
+              </div>
+              <div className="item" role="button" aria-hidden="true" onClick={(e) => goto("schedule")}>
+                <StaticImage
+                  alt="calendar"
+                  src="https://img.icons8.com/color/48/ffffff/google-calendar--v1.png"
+                />
+                <span>Lịch trình</span>
+              </div>
+              <div className="item" role="button" aria-hidden="true" onClick={(e) => goto("map")}>
+                <StaticImage
+                  alt="map"
+                  src="https://img.icons8.com/color/48/ffffff/google-maps.png"
+                />
+                <span>Địa chỉ</span>
+              </div>
+              <div className="item" role="button" aria-hidden="true" onClick={(e) => goto("contact")}>
+                <StaticImage
+                  alt="contact"
+                  src="https://img.icons8.com/color/48/ffffff/apple-phone.png"
+                />
+                <span>Liên hệ</span>
+              </div>
             </div>
-            <div className="item" role="button" aria-hidden="true" onClick={(e) => goto("schedule")}>
-              <img
-                alt="calendar"
-                src="https://img.icons8.com/color/48/ffffff/google-calendar--v1.png"
-              />
-              <span>Lịch trình</span>
-            </div>
-            <div className="item" role="button" aria-hidden="true" onClick={(e) => goto("map")}>
-              <img
-                alt="map"
-                src="https://img.icons8.com/color/48/ffffff/google-maps.png"
-              />
-              <span>Địa chỉ</span>
-            </div>
-            <div className="item" role="button" aria-hidden="true" onClick={(e) => goto("contact")}>
-              <img
-                alt="contact"
-                src="https://img.icons8.com/color/48/ffffff/apple-phone.png"
-              />
-              <span>Liên hệ</span>
-            </div>
-          </div>
+          }
+
         </div>
         <div className="music">
-          <div className="music-btn">
-            <img
+          <div className="music-btn" onClick={setShowMusic(!showMusic)}>
+            <StaticImage
               alt=""
               src="https://img.icons8.com/ultraviolet/40/000000/musical-notes.png"
             />
           </div>
-          <div className="music-panel">
-            <div dangerouslySetInnerHTML={{ __html: soundCloudEmbed }}></div>
-          </div>
+          {showMusic &&
+            <div className="music-panel">
+              <div dangerouslySetInnerHTML={{ __html: soundCloudEmbed }}></div>
+            </div>
+          }
+
         </div>
         <div className="element page1" ref={homeRef}>
           <Invitation />
