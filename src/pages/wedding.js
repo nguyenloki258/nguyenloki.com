@@ -1,3 +1,5 @@
+import "../styles/wedding.scss";
+
 import React, { useRef, useState } from "react";
 import Helmet from "react-helmet";
 import Layout from "../components/layout";
@@ -10,9 +12,9 @@ import Schedule from "../components/schedule";
 import Contact from "../components/contact";
 import Invitation from "../components/invitation";
 
-import "../styles/wedding.scss";
 
-const WeddingPage = ({ data: {} }) => {
+
+const WeddingPage = () => {
   const fullPage = useRef();
   const homeRef = useRef();
   const mapRef = useRef();
@@ -54,96 +56,86 @@ const WeddingPage = ({ data: {} }) => {
   `;
 
   return (
-    <Layout>
-      <Helmet>
-        <title>Lễ vu quy | 12/12/2021 Nguyễn ❤️ Hường</title>
-        <meta
-          name="description"
-          content="Mời bạn tới tham dự tiệc cưới của chúng tôi"
-        />
-      </Helmet>
-      <HeroHeader />
-      <div className="wedding-page" ref={fullPage} onScroll={onScroll}>
-        <div className="left-panel">
-          <Info page={page} />
-        </div>
-        <div className={`right-panel`}>
-          <div className="menu">
-            <div className="menu-btn">
-              <img
-                alt="menu"
-                src="https://img.icons8.com/color/48/ffffff/circled-menu.png"
-              />
-            </div>
-            <div className="menu-panel">
-              <div className="item" onClick={() => goto("album")}>
-                <img
-                  alt="album"
-                  src="https://img.icons8.com/color/48/ffffff/google-photos-new.png"
-                />
-                <span>Album ảnh</span>
-              </div>
-              <div className="item" onClick={() => goto("schedule")}>
-                <img
-                  alt="calendar"
-                  src="https://img.icons8.com/color/48/ffffff/google-calendar--v1.png"
-                />
-                <span>Lịch trình</span>
-              </div>
-              <div className="item" onClick={() => goto("map")}>
-                <img
-                  alt="map"
-                  src="https://img.icons8.com/color/48/ffffff/google-maps.png"
-                />
-                <span>Địa chỉ</span>
-              </div>
-              <div className="item" onClick={() => goto("contact")}>
-                <img
-                  alt="contact"
-                  src="https://img.icons8.com/color/48/ffffff/apple-phone.png"
-                />
-                <span>Liên hệ</span>
-              </div>
-            </div>
-          </div>
-          <div className="music">
-            <div className="music-btn">
-              <img
-                alt=""
-                src="https://img.icons8.com/ultraviolet/40/000000/musical-notes.png"
-              />
-            </div>
-            <div className="music-panel">
-              <div dangerouslySetInnerHTML={{ __html: soundCloudEmbed }}></div>
-            </div>
-          </div>
-          <div className="element page1" ref={homeRef}>
-            <Invitation />
-          </div>
-          <div className="element">
-            <div className="block-tile" ref={scheduleRef}>
-              Lịch trình
-            </div>
-            <Schedule />
-          </div>
-          <div className="element " ref={contactRef}>
-            <div className="block-tile"> Liên hệ</div>
-            <Contact />
-          </div>
-          <div className="element ">
-            <div className="block-tile " ref={mapRef}>
-              Địa chỉ{" "}
-            </div>
-            <Map />
-          </div>
-          <div className="element" ref={albumRef}>
-            <div className="block-tile">Album ảnh</div>
-            <Album />
-          </div>
-          <div className="element"></div>
-        </div>
+    <div className="wedding-page" ref={fullPage} onScroll={onScroll}>
+      <div className="left-panel">
+        <Info page={page} />
       </div>
-    </Layout>
+      <div className={`right-panel`}>
+        <div className="menu">
+          <div className="menu-btn">
+            <img
+              alt="menu"
+              src="https://img.icons8.com/color/48/ffffff/circled-menu.png"
+            />
+          </div>
+          <div className="menu-panel">
+            <div className="item" role="button" aria-hidden="true" onClick={(e) => goto("album")}>
+              <img
+                alt="album"
+                src="https://img.icons8.com/color/48/ffffff/google-photos-new.png"
+              />
+              <span>Album ảnh</span>
+            </div>
+            <div className="item" role="button" aria-hidden="true" onClick={(e) => goto("schedule")}>
+              <img
+                alt="calendar"
+                src="https://img.icons8.com/color/48/ffffff/google-calendar--v1.png"
+              />
+              <span>Lịch trình</span>
+            </div>
+            <div className="item" role="button" aria-hidden="true" onClick={(e) => goto("map")}>
+              <img
+                alt="map"
+                src="https://img.icons8.com/color/48/ffffff/google-maps.png"
+              />
+              <span>Địa chỉ</span>
+            </div>
+            <div className="item" role="button" aria-hidden="true" onClick={(e) => goto("contact")}>
+              <img
+                alt="contact"
+                src="https://img.icons8.com/color/48/ffffff/apple-phone.png"
+              />
+              <span>Liên hệ</span>
+            </div>
+          </div>
+        </div>
+        <div className="music">
+          <div className="music-btn">
+            <img
+              alt=""
+              src="https://img.icons8.com/ultraviolet/40/000000/musical-notes.png"
+            />
+          </div>
+          <div className="music-panel">
+            <div dangerouslySetInnerHTML={{ __html: soundCloudEmbed }}></div>
+          </div>
+        </div>
+        <div className="element page1" ref={homeRef}>
+          <Invitation />
+        </div>
+        <div className="element">
+          <div className="block-tile" ref={scheduleRef}>
+            Lịch trình
+          </div>
+          <Schedule />
+        </div>
+        <div className="element " ref={contactRef}>
+          <div className="block-tile"> Liên hệ</div>
+          <Contact />
+        </div>
+        <div className="element ">
+          <div className="block-tile " ref={mapRef}>
+            Địa chỉ{" "}
+          </div>
+          <Map />
+        </div>
+        <div className="element" ref={albumRef}>
+          <div className="block-tile">Album ảnh</div>
+          <Album />
+        </div>
+        <div className="element"></div>
+      </div>
+    </div>
   );
 };
 

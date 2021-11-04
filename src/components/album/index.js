@@ -2,7 +2,7 @@ import "./index.scss";
 import "lightgallery/scss/lightgallery-bundle.scss";
 import "lightgallery/scss/lg-transitions.scss";
 
-import React, { useCallback } from "react";
+import React from "react";
 import LightGallery from "lightgallery/react";
 // import plugins if you need
 import lgThumbnail from "lightgallery/plugins/thumbnail";

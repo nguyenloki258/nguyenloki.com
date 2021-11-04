@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
 import "./index.scss";
 
 import React, { useRef, useState } from "react";
@@ -75,10 +73,7 @@ const Map = () => {
               latitude={point.latitude}
               longitude={point.longitude}
             >
-              <div
-                className="point-box"
-                onClick={() => setSelectedPoint(point)}
-              >
+              <div role="button" aria-hidden="true" className="point-box" onClick={(e) => setSelectedPoint(point, e)}  >
                 {showInfo?.id === point.id && (
                   <div className="point-popover">
                     <strong>{point.name}</strong>
@@ -107,4 +102,4 @@ const Map = () => {
     </div>
   );
 };
-export default React.memo(Map);
+export default Map;

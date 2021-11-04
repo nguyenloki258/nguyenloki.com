@@ -4,7 +4,8 @@ import ThemeChanger from "../components/themeChanger";
 
 export default props => (
   <nav className="navigation">
-    <Link to="/contact">Contact</Link>
+    <Link to="/wedding">Hôn lễ</Link>
+    <Link to="/contact">Liên Hệ</Link>
     <ThemeChanger />
   </nav>
 );
