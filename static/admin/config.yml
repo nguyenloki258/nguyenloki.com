@@ -2,6 +2,10 @@ backend:
   name: github
   # change repo to your git repository url
   repo: nguyenhero/loki_nieu
+  publish_mode: editorial_workflow  
+site_url: https://nguyenloki.com
+display_url: https://nguyenloki.com
+logo_url: https://your-site.com/images/logo.png
 
 media_folder: static/assets
 public_folder: /assets
@@ -12,8 +16,13 @@ collections:
     files:
       - name: config
         label: Config
-        file: site-meta-data.json
+        file: _data/site-meta-data.json
         fields:
+          - widget: list
+            name: album
+            label: PhotoAlbum
+            default: ["https://lh3.googleusercontent.com/jDSOWeWCJ3jDvjrJdJZqSZbxpr3X8cNSemhAETTFm_XiyZPJsqaqr79-GdXeFobQZ3Tlo9gEZtrwWhaPVn_F1Zo5OfVdzWZ_t_rWCr3Y8FJ6E6YS8RndiR47RCkVYNi1lIg0L_Hzeg=w1920-h1080"]
+            required: true
           - widget: string
             name: title
             label: Site Title

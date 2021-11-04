@@ -1,0 +1,21 @@
+@import "../../styles/_tool.scss";
+.invitation {
+  .top-right-decoration {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .bottom-left-decoration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .main{
+      img{
+        margin: auto;
+        width: 300px;
+        max-width: calc(100% - 150px);
+
+      }
+  }
+}
