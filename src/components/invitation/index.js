@@ -7,13 +7,13 @@ const Invitation = () => {
       <div className="invitation">
         <StaticImage
           alt=""
-          src="images/invitation/sakura-right.webp"
-          class="top-right-decoration animate__animated animate__fadeInDown"
+          src="../../images/invitation/sakura-right.webp"
+          className="top-right-decoration animate__animated animate__fadeInDown"
         />
         <StaticImage
           alt=""
-          src="images/invitation/sakura-left.webp"
-          class="bottom-left-decoration animate__animated animate__fadeInUp"
+          src="../../images/invitation/sakura-left.webp"
+          className="bottom-left-decoration animate__animated animate__fadeInUp"
         />
       </div>
     </div>

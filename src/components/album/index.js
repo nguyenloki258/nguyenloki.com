@@ -18,9 +18,9 @@ import lgShare from "lightgallery/plugins/share";
 import lgAutoplay from "lightgallery/plugins/autoplay";
 
 import IMAGES from "../../consts/data";
-import { StaticImage } from "gatsby-plugin-image";
 
 const Album = () => {
+  console.log("🚀 ~ file: index.js ~ line 21 ~ IMAGES", IMAGES)
   return (
     <div>
       <div className="album">
@@ -44,8 +44,7 @@ const Album = () => {
         >
           {IMAGES.slice(0, 1000).map((x, index) => (
             <a referrerPolicy="no-referrer" href={x.src} key={index}>
-              <StaticImage
-                placeholder="blurred"
+              <img
                 className="album-thumb"
                 referrerPolicy="no-referrer"
                 alt={`Ảnh cưới Nguyễn & Hường ${index + 1}`}

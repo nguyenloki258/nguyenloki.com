@@ -1,11 +1,9 @@
 import "./index.scss";
-
 import React, { useRef, useState } from "react";
-
 import ReactMapGL, { Marker } from "@goongmaps/goong-map-react";
-const GOONG_MAPTILES_KEY = "1YVQoTkZWUdNrHJOUf3jEXI1CxlWqvUfghcn6tRa";
 
-import { StaticImage } from "gatsby-plugin-image";
+
+const GOONG_MAPTILES_KEY = "1YVQoTkZWUdNrHJOUf3jEXI1CxlWqvUfghcn6tRa";
 const FIXED_POINT = [
   {
     id: 1,
@@ -14,7 +12,7 @@ const FIXED_POINT = [
     latitude: 20.951629,
     longitude: 106.058693,
     code: "1",
-    src: "../../images/points/loki.jpg"
+    src: "./assets/loki.jpg",
   },
   {
     id: 2,
@@ -23,8 +21,8 @@ const FIXED_POINT = [
     latitude: 21.01493,
     longitude: 106.38899,
     code: "2",
-    src: "../../images/points/nieu.jpg"
-  }
+    src: "./assets/nieu.jpg",
+  },
 ];
 
 const Map = () => {
@@ -34,11 +32,11 @@ const Map = () => {
     longitude: 106.234035,
     zoom: 9,
     bearing: 0,
-    pitch: 0
+    pitch: 0,
   });
   const [showInfo, setShowInfo] = useState();
 
-  const setSelectedPoint = point => {
+  const setSelectedPoint = (point) => {
     setShowInfo(point);
   };
 
@@ -49,7 +47,7 @@ const Map = () => {
     touchZoom: false,
     touchRotate: false,
     keyboard: false,
-    doubleClickZoom: false
+    doubleClickZoom: false,
   };
 
   return (
@@ -66,7 +64,7 @@ const Map = () => {
           goongApiAccessToken={GOONG_MAPTILES_KEY}
           attributionControl={false}
         >
-          {FIXED_POINT.map(point => (
+          {FIXED_POINT.map((point) => (
             <Marker
               key={`${point.latitude},${point.longitude}`}
               offsetTop={-20}
@@ -74,7 +72,12 @@ const Map = () => {
               latitude={point.latitude}
               longitude={point.longitude}
             >
-              <div role="button" aria-hidden="true" className="point-box" onClick={(e) => setSelectedPoint(point, e)}  >
+              <div
+                role="button"
+                aria-hidden="true"
+                className="point-box"
+                onClick={(e) => setSelectedPoint(point, e)}
+              >
                 {showInfo?.id === point.id && (
                   <div className="point-popover">
                     <strong>{point.name}</strong>
@@ -93,7 +96,7 @@ const Map = () => {
                   </div>
                 )}
                 <div className="marker-circle">
-                  <StaticImage src={point.src} alt={point.code} />
+                  <img src={point.src} alt={point.code} />
                 </div>
               </div>
             </Marker>
