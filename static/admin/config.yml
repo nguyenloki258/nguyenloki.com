@@ -9,149 +9,110 @@ media_folder: static/assets
 public_folder: /assets
 collections:
   - name: settings
-    label: Settings
+    label: Cấu hình
     delete: false
     editor:
       preview: false
     files:
       - name: config
-        label: Site Setting
+        label: Cấu hình chung
         file: _data/site-meta-data.json
         fields:
           - widget: string
             name: title
-            label: Title
+            label: Tiêu đề trang
             required: true
-            hint: ""
             default: ""
           - widget: string
             name: siteUrl
-            label: Website url
+            label: Đường dẫn website
             required: true
-            hint: ""
             default: ""
           - widget: text
             name: description
-            label: Description
+            label: Mô tả
             default: ""
             required: false
-            hint: ""
           - widget: object
             name: home
-            label: Home Page
+            label: Trang chủ
             fields:
               - widget: string
                 name: title
-                label: Title
+                label: Giới thiệu
                 default: ""
                 required: false
-                hint: ""
               - widget: markdown
                 name: description
-                label: Description
+                label: Nội dung
                 default: ""
                 required: false
-                hint: ""
                 buttons: []
             required: true
-            hint: ""
-          - label: Wedding Page
+          - label: Trang hôn lễ
             name: wedding
             required: true
             widget: object
-            hint: ""
             fields:
               - label: Album Json
                 name: albumJson
                 required: true
                 widget: string
-                hint: ""
                 default: ""
               - label: Album
                 name: ablum
                 required: true
                 widget: list
-                hint: ""
                 default: ""
                 allow_add: true
                 field: ""
                 fields: ""
   - name: blog
-    label: Blog
+    label: Bài viết
     folder: _data/blog
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - label: Template
+      - label: Mẫu bài viết
         name: template
         required: true
         widget: hidden
-        hint: ""
         default: BlogPost
-      - label: Path
+      - label: Đường dẫn
         name: path
         required: true
         widget: string
-        hint: ""
+        hint: Đường dẫn phải bắt đầu bằng /
         default: ""
-      - label: Date
+      - label: Ngày tạo
         name: date
         required: true
         widget: datetime
-        hint: ""
         default: ""
         format: ""
         dateFormat: ""
         timeFormat: ""
-      - label: Title
+      - label: Tiêu đề
         name: title
         required: true
         widget: string
-        hint: ""
-        default: ""
-      - label: Sapo
+        default: Tiêu đề bài viết
+      - label: Tóm tắt
         name: metaDescription
         required: true
         widget: text
-        hint: ""
         default: ""
-      - label: Thumbnail
+      - label: Ảnh đại diện
         name: thumbnail
         required: true
         widget: image
-        hint: ""
+        hint: Kích thước khuyến nghị 1280x800
         default: ""
         allow_multiple: false
-      - label: Config
-        name: config
-        required: true
-        widget: object
-        hint: ""
-        fields:
-          - label: Relation Blog
-            name: relationBlog
-            required: true
-            widget: relation
-            hint: ""
-            default: ""
-            collection: blog
-            displayFields: "['title', 'metaDescription']"
-            searchFields: "['title', 'body']"
-            valueField: "['title', 'body','metaDescription','thumbnail']"
-            multiple: true
-            optionsLength: 20
-          - label: File Download
-            name: files
-            required: false
-            widget: file
-            hint: ""
-            default: ""
-            allow_multiple: true
-      - label: Body
+      - label: Nội dung
         name: body
         required: true
         widget: markdown
-        hint: ""
         default: ""
         buttons:
           - bold
