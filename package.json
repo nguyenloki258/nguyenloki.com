@@ -2,9 +2,11 @@
   "name": "nguyenloki",
   "description": "Loki Blog",
   "author": "@nguyenhero",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "license": "MIT",
   "dependencies": {
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
     "@goongmaps/goong-map-react": "^1.1.0",
     "animate.css": "^4.1.1",
     "gatsby": "^2.21.0",
@@ -31,10 +33,14 @@
     "react": "^16.12.0",
     "react-countdown": "^2.3.2",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "sharp": "^0.29.2"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "husky": "^7.0.0",
+    "lint-staged": "^11.2.6",
+    "prettier": "^1.19.1",
+    "standard-version": "^9.3.2"
   },
   "homepage": "http://nguyenloki.com/",
   "keywords": [
@@ -42,12 +48,17 @@
     "netlify cms"
   ],
   "scripts": {
+    "pushgit": "git push --follow-tags origin master",
+    "release": "standard-version",
+    "release:git": "npm run release && npm run pushgit",
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
   }
 }
