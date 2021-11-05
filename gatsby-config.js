@@ -8,6 +8,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: require("./_data/site-meta-data.json"),
   plugins: [
+    'gatsby-plugin-mantine',
     {
       resolve: `gatsby-source-filesystem`,
       options: {

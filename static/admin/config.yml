@@ -22,111 +22,82 @@ collections:
             name: title
             label: Tiêu đề trang
             required: true
+            hint: ""
             default: ""
           - widget: string
             name: siteUrl
-            label: Đường dẫn website
+            label: Địa chỉ trang
             required: true
+            hint: ""
             default: ""
           - widget: text
             name: description
-            label: Mô tả
+            label: Ghi chú
             default: ""
             required: false
+            hint: ""
           - widget: object
             name: home
             label: Trang chủ
             fields:
               - widget: string
                 name: title
+                label: Tiêu đề
+                default: ""
+                required: false
+                hint: ""
+              - widget: markdown
+                name: description
                 label: Giới thiệu
                 default: ""
                 required: false
-              - widget: markdown
-                name: description
-                label: Nội dung
-                default: ""
-                required: false
+                hint: ""
                 buttons: []
             required: true
+            hint: ""
           - label: Trang hôn lễ
             name: wedding
             required: true
             widget: object
+            hint: ""
             fields:
               - label: Album Json
                 name: albumJson
                 required: true
                 widget: string
-                default: ""
-              - label: Album
-                name: ablum
-                required: true
-                widget: list
-                default: ""
-                allow_add: true
-                field: ""
-                fields: ""
+                hint: ""
+                default: "" 
   - name: blog
-    label: Bài viết
+    label: Blog
     folder: _data/blog
-    create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true
     fields:
-      - label: Mẫu bài viết
+      - label: Template
         name: template
-        required: true
         widget: hidden
         default: BlogPost
-      - label: Đường dẫn
-        name: path
-        required: true
+      - name: path
+        label: Path
         widget: string
-        hint: Đường dẫn phải bắt đầu bằng /
-        default: ""
-      - label: Ngày tạo
-        name: date
-        required: true
+        hint: Path must start with /
+      - name: date
+        label: Date
         widget: datetime
-        default: ""
-        format: ""
-        dateFormat: ""
-        timeFormat: ""
-      - label: Tiêu đề
-        name: title
-        required: true
-        widget: string
-        default: Tiêu đề bài viết
-      - label: Tóm tắt
+      - name: title
+        label: Title
+      - label: Meta Description
         name: metaDescription
-        required: true
         widget: text
-        default: ""
-      - label: Ảnh đại diện
+        required: false
+      - label: Featured Image
         name: thumbnail
-        required: true
         widget: image
-        hint: Kích thước khuyến nghị 1280x800
-        default: ""
-        allow_multiple: false
-      - label: Nội dung
-        name: body
-        required: true
+        hint: Image size 1280x800 works best :)
+        required: false
+        media_library:
+          config:
+            multiple: false
+      - name: body
+        label: Body
         widget: markdown
-        default: ""
-        buttons:
-          - bold
-          - italic
-          - heading-five
-          - heading-six
-          - code
-          - link
-          - quote
-          - heading-one
-          - code-block
-          - bulleted-list
-          - heading-two
-          - heading-three
-          - numbered-list
-          - heading-four
-    identifier_field: ""

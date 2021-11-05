@@ -10,7 +10,7 @@ import Schedule from "../components/schedule";
 import Contact from "../components/contact";
 import Invitation from "../components/invitation";
 import { StaticImage } from "gatsby-plugin-image";
-
+import { graphql } from 'gatsby';
 
 
 const WeddingPage = ({ data: { site } }) => {

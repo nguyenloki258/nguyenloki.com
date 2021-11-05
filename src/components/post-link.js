@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 
 const PostLink = ({ post }) => (
   <article className="card ">
     <Link to={post.frontmatter.path}>
       {!!post.frontmatter.thumbnail && (
-        <StaticImage
+        <img
           src={post.frontmatter.thumbnail}
           alt={post.frontmatter.title + "- Featured Shot"}
         />
