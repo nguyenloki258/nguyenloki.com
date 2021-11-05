@@ -1,139 +1,152 @@
 @import "./tool";
 
 .wedding-page {
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    .left-panel {
-      overflow: hidden;
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      @include desktop-xl {
-        width: calc(100vw - 600px);
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  .menu {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    z-index: 999;
+    .menu-btn {
+      img {
+        width: 36px;
+        height: 36px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 4px;
       }
-      @include desktop {
-        width: calc(100vw - 600px);
-      }
-      @include desktop-sm {
-        width: calc(100vw - 450px);
-      }
-      @include tablet {
-        display: none;
-      }
-      @include mobile {
-        display: none;
+      &.active{
+        img{
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
       }
     }
-    .right-panel {
-      .menu {
-        position: fixed;
-        top: 1rem;
-        left: 1rem;
+
+    .menu-panel {
+      max-height: 0;
+      transition: max-height 0.5s ease-out;
+      overflow: hidden;
+      padding: 0 ;
+      &.active { 
+        max-height: 500px;
+        transition: max-height 1s ease-in;
+      }
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      border-radius: 4px;
+      border-top-left-radius: 0;
+      background-color: white;
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         cursor: pointer;
-        z-index: 999;
-        .menu-btn {
-          img {
-            width: 36px;
-            height: 36px;
-          }
-        }
-  
-        .menu-panel {
-          opacity: 0;
-          &.active{
-            opacity: 1;
-          }
-          display: grid;
-          margin-left: 1rem;
-          padding: 1rem;
-          grid-template-columns: 1fr 1fr;
-          gap: 1rem;
-          border-radius: 4px;
-          box-shadow: -1px 0px 5px 0px #776f6f;
-          background-color: white;
-          .item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            cursor: pointer;
-            border-radius: 4px;
-            padding: 0.5rem;
-            opacity: 0.8;
-            &:hover {
-              opacity: 1;
-            }
-            img {
-              width: 36px;
-              height: 36px;
-            }
-          }
-        }
-        
-      }
-      .music {
-        position: fixed;
-        bottom: 1rem;
-        right:  1rem;
-        cursor: pointer;
-        z-index: 999;
-        text-align: right;
-        .music-btn {
-          img {
-            width: 36px;
-            height: 36px;
-          }
-        }
-  
-        .music-panel {
-          overflow: hidden;
-          opacity: 0;
-          &.active{
-            opacity: 1;
-          }
-          
-        }
-      }
-      @include desktop-xl {
-        padding-left: calc(100vw - 600px);
-      }
-      @include desktop {
-        padding-left: calc(100vw - 600px);
-      }
-      @include desktop-sm {
-        padding-left: calc(100vw - 450px);
-      }
-      @include tablet {
-        padding-left: none;
-      }
-      @include mobile {
-        padding-left: none;
-      }
-      .element {
-        &.page1 {
-          min-height: 100vh;
-        }
-        position: relative;
+        border-radius: 4px;
         padding: 1rem;
-        &::after {
-          content: "";
-          height: 1px;
-          background-color: #e8e8e8;
-          position: absolute;
-          bottom: 1px;
-          left: 0;
-          right: 0;
-          margin: 0 auto;
+        opacity: 0.8;
+        &:hover {
+          opacity: 1;
         }
-        .block-tile {
-          font-size: 1.5rem;
-          text-align: center;
-          margin-bottom: 0.5rem;
+        img {
+          width: 36px;
+          height: 36px;
         }
-     
       }
     }
   }
-  
+  .music {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    z-index: 999;
+    text-align: right;
+    .music-btn {
+      img {
+        width: 36px;
+        height: 36px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 4px;
+      }
+    }
+
+    .music-panel { 
+      max-height: 0;
+      transition: max-height 0.5s ease-out;
+      overflow: hidden;
+      padding: 0 ;
+      &.active {
+        max-height: 500px;
+        transition: max-height 1s ease-in;
+      }
+    }
+  }
+  .left-panel {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    @include desktop-xl {
+      width: calc(100vw - 600px);
+    }
+    @include desktop {
+      width: calc(100vw - 600px);
+    }
+    @include desktop-sm {
+      width: calc(100vw - 450px);
+    }
+    @include tablet {
+      position: relative;
+    }
+    @include mobile {
+      position: relative;
+    }
+  }
+  .right-panel {
+    @include desktop-xl {
+      padding-left: calc(100vw - 600px);
+    }
+    @include desktop {
+      padding-left: calc(100vw - 600px);
+    }
+    @include desktop-sm {
+      padding-left: calc(100vw - 450px);
+    }
+    @include tablet {
+      padding-left: none;
+    }
+    @include mobile {
+      padding-left: none;
+    }
+    .element {
+      &.page1 {
+        min-height: 100vh;
+      }
+      position: relative;
+      padding: 1rem;
+      &::after {
+        content: "";
+        height: 1px;
+        background-color: #e8e8e8;
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+      .block-tile {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

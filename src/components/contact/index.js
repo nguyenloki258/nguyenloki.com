@@ -18,14 +18,11 @@ const Contact = () => {
             />
             <StaticImage
               alt=""
-              src="https://img.icons8.com/plasticine/48/ffffff/zalo.png"
-            />
-            <StaticImage
-              alt=""
               src="https://img.icons8.com/color/48/ffffff/apple-phone.png"
             />
           </div>
         </div>
+        <img src="https://img.icons8.com/color/48/000000/filled-like.png" />
         <div className="figure">
           <span>Cô dâu</span>
           <StaticImage
@@ -37,10 +34,7 @@ const Contact = () => {
               alt=""
               src="https://img.icons8.com/color/48/ffffff/facebook.png"
             />
-            <StaticImage
-              alt=""
-              src="https://img.icons8.com/plasticine/48/ffffff/zalo.png"
-            />
+
             <StaticImage
               alt=""
               src="https://img.icons8.com/color/48/ffffff/apple-phone.png"

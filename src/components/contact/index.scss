@@ -1,8 +1,9 @@
 @import "../../styles/_tool.scss";
 .contact {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 36px 1fr;
   text-align: center;
+  align-items: center;
   gap: 2rem;
   .figure{
     border-radius: 8px;
