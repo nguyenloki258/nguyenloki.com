@@ -9,53 +9,53 @@ media_folder: static/assets
 public_folder: /assets
 collections:
   - name: settings
-    label: Cấu hình
+    label: Settings
     delete: false
     editor:
       preview: false
     files:
       - name: config
-        label: Cấu hình chung
+        label: Site Setting
         file: _data/site-meta-data.json
         fields:
           - widget: string
             name: title
-            label: Tiêu đề trang
+            label: Title
             required: true
             hint: ""
             default: ""
           - widget: string
             name: siteUrl
-            label: Đường dẫn website
+            label: Website url
             required: true
             hint: ""
             default: ""
           - widget: text
             name: description
-            label: Mô tả
+            label: Description
             default: ""
             required: false
             hint: ""
           - widget: object
             name: home
-            label: Trang chủ
+            label: Home Page
             fields:
               - widget: string
                 name: title
-                label: Giới thiệu
+                label: Title
                 default: ""
                 required: false
                 hint: ""
               - widget: markdown
                 name: description
-                label: Nội dung
+                label: Description
                 default: ""
                 required: false
                 hint: ""
                 buttons: []
             required: true
             hint: ""
-          - label: Trang hôn lễ
+          - label: Wedding Page
             name: wedding
             required: true
             widget: object
@@ -77,24 +77,24 @@ collections:
                 field: ""
                 fields: ""
   - name: blog
-    label: Bài viết
+    label: Blog
     folder: _data/blog
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - label: Mẫu bài viết
+      - label: Template
         name: template
         required: true
         widget: hidden
         hint: ""
         default: BlogPost
-      - label: Đường dẫn
+      - label: Path
         name: path
         required: true
         widget: string
-        hint: Đường dẫn phải bắt đầu bằng /
+        hint: ""
         default: ""
-      - label: Ngày tạo
+      - label: Date
         name: date
         required: true
         widget: datetime
@@ -103,36 +103,36 @@ collections:
         format: ""
         dateFormat: ""
         timeFormat: ""
-      - label: Tiêu đề
+      - label: Title
         name: title
         required: true
         widget: string
         hint: ""
-        default: Tiêu đề bài viết
-      - label: Tóm tắt
+        default: ""
+      - label: Sapo
         name: metaDescription
         required: true
         widget: text
         hint: ""
         default: ""
-      - label: Ảnh đại diện
+      - label: Thumbnail
         name: thumbnail
         required: true
         widget: image
-        hint: Kích thước khuyến nghị 1280x800
+        hint: ""
         default: ""
         allow_multiple: false
-      - label: Cấu hình
+      - label: Config
         name: config
         required: true
         widget: object
         hint: ""
         fields:
-          - label: Bài viết liên quan
+          - label: Relation Blog
             name: relationBlog
             required: true
             widget: relation
-            hint: Chọn bài viết liên quan
+            hint: ""
             default: ""
             collection: blog
             displayFields: "['title', 'metaDescription']"
@@ -140,14 +140,14 @@ collections:
             valueField: "['title', 'body','metaDescription','thumbnail']"
             multiple: true
             optionsLength: 20
-          - label: File tải về
+          - label: File Download
             name: files
             required: false
             widget: file
             hint: ""
             default: ""
             allow_multiple: true
-      - label: Nội dung
+      - label: Body
         name: body
         required: true
         widget: markdown
