@@ -1,51 +1,46 @@
 ---
 template: BlogPost
-path: /fillerama
-date: 2020-02-20T14:59:36.571Z
-title: Dummy Content from Fillerama
-thumbnail: /assets/image-5.jpg
+path: /son-tinh-thuy-tinh
+date: 2021-11-08T07:57:14.504Z
+title: Sơn Tinh Thuỷ Tinh
+thumbnail: /assets/son-tinh-vs-thuy-tinh-ngay-nay.jpg
 ---
+Lại nghe trong thủa Lạc Hồng
 
-# No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No, I'm the Doctor. Don't call me the Rotmeister.
+Mị Châu có ả tư phong bất thường
 
-I am the Doctor, and you are the Daleks! You hit me with a cricket bat. You know when grown-ups tell you 'everything's going to be fine' and you think they're probably lying to make you feel better? You hit me with a cricket bat.
+Gần xa nức tiếng cung trang
 
-You've swallowed a planet! No… It's a thing; it's like a plan, but with more greatness. You hate me; you want to kill me! Well, go on! **Kill me!** _KILL ME!_ Sorry, checking all the water in this area; there's an escaped fish.
+Thừa long hai kẻ đông sàng sánh vai
 
-## Did I mention we have comfy chairs?
+Sánh nghi ước gặp ngày mai
 
-No… It's a thing; it's like a plan, but with more greatness. Annihilate? No. No violence. I won't stand for it. Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn't you?
+Ai mau chân trước định lời hứa anh
 
-1. \*Insistently\* Bow ties are cool! Come on Amy, I'm a normal bloke, tell me what normal blokes do!
-2. Sorry, checking all the water in this area; there's an escaped fish.
-3. Father Christmas. Santa Claus. Or as I've always known him: Jeff.
+Trống làu vừa mới tan canh
 
-### I'm nobody's taxi service; I'm not gonna be there to catch you every time you feel like jumping out of a spaceship.
+Kiệu hoa đã thấy Sơn Tinh trực ngoài
 
-It's a fez. I wear a fez now. Fezes are cool. You know how I sometimes have really brilliant ideas? You know how I sometimes have really brilliant ideas? Sorry, checking all the water in this area; there's an escaped fish.
+Ước sao lại cứ như lời
 
-- I am the last of my species, and I know how that weighs on the heart so don't lie to me!
-- You hit me with a cricket bat.
-- You know when grown-ups tell you 'everything's going to be fine' and you think they're probably lying to make you feel better?
+Xe hoa trăm cỗ đón người đi ra
 
-I'm the Doctor. Well, they call me the Doctor. I don't know why. I call me the Doctor too. I still don't know why. I'm nobody's taxi service; I'm not gonna be there to catch you every time you feel like jumping out of a spaceship.
+Cung đàn tiếng nực xa xa
 
-It's a fez. I wear a fez now. Fezes are cool. The way I see it, every life is a pile of good things and bad things.…hey.…the good things don't always soften the bad things; but vice-versa the bad things don't necessarily spoil the good things and make them unimportant.
+Vui về non Toản hoá ra bể tần
 
-You know how I sometimes have really brilliant ideas? Annihilate? No. No violence. I won't stand for it. Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn't you?
+Thủy Tinh nhỡ bước đến sau
 
-You've swallowed a planet! They're not aliens, they're Earth…liens! You know when grown-ups tell you 'everything's going to be fine' and you think they're probably lying to make you feel better?
+Đùng đùng nổi giận lấy ân làm thù
 
-Father Christmas. Santa Claus. Or as I've always known him: Jeff. \*Insistently\* Bow ties are cool! Come on Amy, I'm a normal bloke, tell me what normal blokes do! No… It's a thing; it's like a plan, but with more greatness.
+Mưa tuôn gió thổi mịt mù
 
-\*Insistently\* Bow ties are cool! Come on Amy, I'm a normal bloke, tell me what normal blokes do! You've swallowed a planet! I'm the Doctor. Well, they call me the Doctor. I don't know why. I call me the Doctor too. I still don't know why.
+Oàng oàng rừng nọ ù ù núi kia
 
-It's art! A statement on modern society, 'Oh Ain't Modern Society Awful?'! All I've got to do is pass as an ordinary human being. Simple. What could possibly go wrong? Saving the world with meals on wheels.
+Sơn thần hoá phép cũng ghê
 
-You've swallowed a planet! Heh-haa! Super squeaky bum time! All I've got to do is pass as an ordinary human being. Simple. What could possibly go wrong? You know when grown-ups tell you 'everything's going to be fine' and you think they're probably lying to make you feel better?
+Lưới giăng giòng nhị phên tre ngàn đoài
 
-No… It's a thing; it's like a plan, but with more greatness. It's a fez. I wear a fez now. Fezes are cool. You hate me; you want to kill me! Well, go on! Kill me! KILL ME! Saving the world with meals on wheels.
+Núi cao sông hãy còn dài
 
-You know when grown-ups tell you 'everything's going to be fine' and you think they're probably lying to make you feel better? Sorry, checking all the water in this area; there's an escaped fish. You hit me with a cricket bat.
-
-Did I mention we have comfy chairs? Stop talking, brain thinking. Hush. No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No, I'm the Doctor. Don't call me the Rotmeister. You know how I sometimes have really brilliant ideas?
+Năm năm báo oán đời đời đánh ghen
