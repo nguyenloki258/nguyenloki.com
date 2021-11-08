@@ -20,7 +20,6 @@ import lgAutoplay from "lightgallery/plugins/autoplay";
 import IMAGES from "../../consts/data";
 
 const Album = () => {
-  console.log("🚀 ~ file: index.js ~ line 21 ~ IMAGES", IMAGES)
   return (
     <div>
       <div className="album">

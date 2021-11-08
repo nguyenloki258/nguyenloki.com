@@ -19,8 +19,8 @@
         border-radius: 8px;
         padding: 4px;
       }
-      &.active{
-        img{
+      &.active {
+        img {
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
         }
@@ -29,12 +29,14 @@
 
     .menu-panel {
       max-height: 0;
-      transition: max-height 0.5s ease-out;
+      max-width: 0;
+      transition: all 0.2s ease-out;
       overflow: hidden;
-      padding: 0 ;
-      &.active { 
+      padding: 0;
+      &.active {
+        max-width: 500px;
         max-height: 500px;
-        transition: max-height 1s ease-in;
+        transition: all 0.5s ease-in;
       }
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -50,6 +52,9 @@
         border-radius: 4px;
         padding: 1rem;
         opacity: 0.8;
+        span {
+          color: black;
+        }
         &:hover {
           opacity: 1;
         }
@@ -77,14 +82,17 @@
       }
     }
 
-    .music-panel { 
+    .music-panel {
+      max-width: 0;
       max-height: 0;
-      transition: max-height 0.5s ease-out;
+      transition: all 0.2s ease-out;
       overflow: hidden;
-      padding: 0 ;
+      text-align: right;
+      padding: 0;
       &.active {
+        max-width: 500px;
         max-height: 500px;
-        transition: max-height 1s ease-in;
+        transition: all 0.5s ease-in;
       }
     }
   }

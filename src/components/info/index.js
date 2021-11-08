@@ -93,7 +93,7 @@ const Info = ({ page }) => {
   return (
     <div
       referrerPolicy="no-referrer"
-      className={`info animate__animated ${effectBg}`}
+      className={`info animate__animated ${effectBg}`} 
       style={{ backgroundImage: `url(${selectedImage?.src})` }}
     >
       {renderInfo()}

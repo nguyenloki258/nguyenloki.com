@@ -9,7 +9,6 @@ import Info from "../components/info";
 import Schedule from "../components/schedule";
 import Contact from "../components/contact";
 import Invitation from "../components/invitation";
-import { StaticImage } from "gatsby-plugin-image";
 import { graphql } from 'gatsby';
 
 
@@ -93,35 +92,35 @@ const WeddingPage = ({ data: { site } }) => {
         <div className={showMenu ? "menu-btn active" : "menu-btn"}  
           ref={menuRef}
           aria-hidden="true" role="button" onClick={() => setShowMenu(!showMenu)}>
-          <StaticImage
+          <img
             alt="menu"
             src="https://img.icons8.com/color/48/ffffff/circled-menu.png"
           />
         </div>
         <div className={showMenu ? "menu-panel active" : "menu-panel"}>
           <div className="item" role="button" aria-hidden="true" onClick={(e) => goto("album")}>
-            <StaticImage
+            <img
               alt="album"
               src="https://img.icons8.com/color/48/ffffff/google-photos-new.png"
             />
             <span>Album ảnh</span>
           </div>
           <div className="item" role="button" aria-hidden="true" onClick={(e) => goto("schedule")}>
-            <StaticImage
+            <img
               alt="calendar"
               src="https://img.icons8.com/color/48/ffffff/google-calendar--v1.png"
             />
             <span>Hành trình</span>
           </div>
           <div className="item" role="button" aria-hidden="true" onClick={(e) => goto("map")}>
-            <StaticImage
+            <img
               alt="map"
               src="https://img.icons8.com/color/48/ffffff/google-maps.png"
             />
             <span>Địa chỉ</span>
           </div>
           <div className="item" role="button" aria-hidden="true" onClick={(e) => goto("contact")}>
-            <StaticImage
+            <img
               alt="contact"
               src="https://img.icons8.com/color/48/ffffff/apple-phone.png"
             />
@@ -133,7 +132,7 @@ const WeddingPage = ({ data: { site } }) => {
         <div className="music-btn"
           ref={musicRef}
           aria-hidden="true" role="button" onClick={() => setShowMusic(!showMusic)}>
-          <StaticImage
+          <img
             alt=""
             src="https://img.icons8.com/ultraviolet/40/000000/musical-notes.png"
           />
@@ -143,8 +142,8 @@ const WeddingPage = ({ data: { site } }) => {
         </div>
 
       </div>  
-      <div className="left-panel">
-        <Info page={page} />
+      <div className="left-panel" aria-hidden="true" role="button" onDoubleClick={()=>setPage(page+1)}>
+        <Info page={page}  />
       </div>
       <div className={`right-panel`}>
 

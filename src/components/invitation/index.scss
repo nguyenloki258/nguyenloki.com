@@ -1,5 +1,6 @@
 @import "../../styles/_tool.scss";
 .invitation {
+  position: relative;
   .top-right-decoration {
     position: absolute;
     top: 0;
@@ -10,12 +11,24 @@
     bottom: 0;
     left: 0;
   }
-  .main{
-      img{
-        margin: auto;
-        width: 300px;
-        max-width: calc(100% - 150px);
+  .heading {
+    position: absolute;
+    width: 100%;
+    top: 10rem;
+    left: 0;
+    text-align: center;
+    font-size: 5rem;
+    font-family: "Dancing Script", sans-serif;
+  }
+  .send-to {
+    position: absolute;
 
-      }
+    position: absolute;
+    width: 100%;
+    bottom: 4rem;
+    left: 0;
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Dancing Script", sans-serif;
   }
 }

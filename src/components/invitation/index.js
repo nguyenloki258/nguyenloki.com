@@ -5,7 +5,7 @@ const Invitation = () => {
   return (
     <div>
       <div className="invitation">
-        <StaticImage
+      <StaticImage
           alt=""
           src="../../images/invitation/sakura-right.webp"
           className="top-right-decoration animate__animated animate__fadeInDown"
@@ -13,8 +13,10 @@ const Invitation = () => {
         <StaticImage
           alt=""
           src="../../images/invitation/sakura-left.webp"
-          className="bottom-left-decoration animate__animated animate__fadeInUp"
+          className="bottom-left-decoration animate__animatyaed animate__fadeInUp"
         />
+        <div className="heading">Thiệp mời </div>
+        <div className="send-to">Kính mời<br/>........................</div>
       </div>
     </div>
   );

@@ -68,7 +68,7 @@ collections:
                 hint: ""
                 default: "" 
   - name: blog
-    label: Blog
+    label: Bài viết
     folder: _data/blog
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true

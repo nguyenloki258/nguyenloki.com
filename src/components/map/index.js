@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import ReactMapGL, { Marker } from "@goongmaps/goong-map-react";
 
 
-const GOONG_MAPTILES_KEY = "1YVQoTkZWUdNrHJOUf3jEXI1CxlWqvUfghcn6tRa";
+const GOONG_MAPTILES_KEY = "fTDkP448bDdMHueqjqYZFQD4EK5ZQjYVOLf6tfsZ";
 const FIXED_POINT = [
   {
     id: 1,
