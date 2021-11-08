@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/nguyenhero/nguyenloki/compare/v1.2.0...v1.3.0) (2021-11-08)
+
+
+### Features
+
+* loki ([88e05eb](https://github.com/nguyenhero/nguyenloki/commit/88e05eb127cfc20ed7c9bd3a82171513ef27726b))
+* update ([4e51b6a](https://github.com/nguyenhero/nguyenloki/commit/4e51b6aac0155f69fa60c11a5311ca8b0c89df3a))
+* update wedding page ([c68a4df](https://github.com/nguyenhero/nguyenloki/commit/c68a4dfbbc55dabf3e56ece58e519a02ef712786))
+
 ## 1.2.0 (2021-11-05)
 
 
