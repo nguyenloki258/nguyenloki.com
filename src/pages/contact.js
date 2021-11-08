@@ -7,7 +7,7 @@ const ContactPage = ({ data: { site } }) => {
   return (
     <Layout>
       <Helmet>
-        <title>Contact — {site.siteMetadata.title}</title>
+        <title>Liên hệ — {site.siteMetadata.title}</title>
         <meta
           name="description"
           content={"Contact page of " + site.siteMetadata.description}
@@ -21,8 +21,8 @@ const ContactPage = ({ data: { site } }) => {
             marginBottom: 0
           }}
         >
-          <h1 className="post-title">Get in Touch</h1>
-          <p>Let me help you kick start your next project &rarr;</p>
+          <h1 className="post-title">Liên hệ với tôi</h1>
+          <p>Cùng chia sẻ kiến thức hữu hiệu&rarr;</p>
         </div>
         <div>
           <form
@@ -31,19 +31,19 @@ const ContactPage = ({ data: { site } }) => {
             method="post"
           >
             <div>
-              <label htmlFor="w3lName">Name</label>
+              <label htmlFor="w3lName">Tên</label>
               <input type="text" name="w3lName" id="w3lName" />
             </div>
             <div>
-              <label htmlFor="w3lSender">Email</label>
+              <label htmlFor="w3lSender">Địa chỉ email</label>
               <input type="email" name="w3lSender" id="w3lSender" />
             </div>
             <div>
-              <label htmlFor="w3lSubject">Subject</label>
+              <label htmlFor="w3lSubject">Chủ đề</label>
               <input type="text" name="w3lSubject" id="w3lSubject" />
             </div>
             <div>
-              <label htmlFor="w3lMessage">Message</label>
+              <label htmlFor="w3lMessage">Nội dung</label>
               <textarea name="w3lMessage" id="w3lMessage"></textarea>
             </div>
             <div style={{ display: "flex", justifyContent: "flex-end" }}>
@@ -51,6 +51,7 @@ const ContactPage = ({ data: { site } }) => {
                 type="submit"
                 className="button -primary"
                 style={{ marginRight: 0 }}
+                value="Gửi ngay"
               />
             </div>
           </form>

@@ -4,6 +4,7 @@ path: /son-tinh-thuy-tinh
 date: 2021-11-08T07:57:14.504Z
 title: Sơn Tinh Thuỷ Tinh
 thumbnail: /assets/son-tinh-vs-thuy-tinh-ngay-nay.jpg
+metaDescription: Sơn Tinh Thuỷ Tinh
 ---
 Lại nghe trong thủa Lạc Hồng
 
