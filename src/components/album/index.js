@@ -16,10 +16,24 @@ import lgShare from "lightgallery/plugins/share";
 // import lgFullscreen from 'lightgallery/plugins/fullscreen';
 // import lgComment from 'lightgallery/plugins/comment';
 import lgAutoplay from "lightgallery/plugins/autoplay";
+import { useStaticQuery, graphql } from "gatsby"
 
-import IMAGES from "../../consts/data";
 
 const Album = () => {
+  const data = useStaticQuery(graphql`
+  {
+    site {
+      siteMetadata {
+        wedding {
+          album {
+            src
+          }
+        }
+      }
+    }
+  }
+`)
+const IMAGES = data?.site?.siteMetadata?.wedding?.album;
   return (
     <div>
       <div className="album">

@@ -1,10 +1,24 @@
 import "./index.scss";
 import React from "react";
 import Countdown from "react-countdown";
-import IMAGES from "../../consts/data";
 import { EFFECT_IN } from "../../consts/effect";
+import { useStaticQuery, graphql } from "gatsby"
 
 const Info = ({ page }) => {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          wedding {
+            album {
+              src
+            }
+          }
+        }
+      }
+    }
+  `);
+  const IMAGES = data?.site?.siteMetadata?.wedding?.album;
   const selectedImage = IMAGES[Math.floor(Math.random() * IMAGES.length)];
   const effectBg = EFFECT_IN[Math.floor(Math.random() * EFFECT_IN.length)];
   const effectItem = EFFECT_IN[Math.floor(Math.random() * EFFECT_IN.length)];
@@ -54,7 +68,7 @@ const Info = ({ page }) => {
         );
       case 3:
         const Completionist = () => <span>Đã kết hôn!</span>;
-        const renderCountDown = e => {
+        const renderCountDown = (e) => {
           console.log(e);
           return (
             <div
@@ -93,7 +107,7 @@ const Info = ({ page }) => {
   return (
     <div
       referrerPolicy="no-referrer"
-      className={`info animate__animated ${effectBg}`} 
+      className={`info animate__animated ${effectBg}`}
       style={{ backgroundImage: `url(${selectedImage?.src})` }}
     >
       {renderInfo()}

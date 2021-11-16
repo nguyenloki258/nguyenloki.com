@@ -52,7 +52,6 @@ collections:
                 default: ""
                 required: false
                 hint: ""
-                buttons: []
             required: true
             hint: ""
           - label: Trang hôn lễ
@@ -61,12 +60,20 @@ collections:
             widget: object
             hint: ""
             fields:
-              - label: Album Json
-                name: albumJson
+              - label: Album
+                name: album
                 required: true
-                widget: string
+                widget: list
                 hint: ""
-                default: "" 
+                default: ""
+                allow_add: true
+                field:
+                  label: Source
+                  name: src
+                  required: false
+                  widget: string
+                  hint: ""
+                  default: ""
   - name: blog
     label: Bài viết
     folder: _data/blog
