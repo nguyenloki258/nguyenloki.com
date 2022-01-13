@@ -12,7 +12,7 @@ const IndexPage = ({
   }
 }) => {
   const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date)  
+    .filter(edge => !!edge.node.frontmatter.date)
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
 
   return (
@@ -20,6 +20,8 @@ const IndexPage = ({
       <Helmet>
         <title>{site.siteMetadata.title}</title>
         <meta name="description" content={site.siteMetadata.description} />
+        <script src="https://nieushop.com/assets/modules/channel-web/inject.js"></script>
+        <script src="/assets/script.js"></script>
       </Helmet>
       <HeroHeader />
       <h2>Bài viết &darr;</h2>
