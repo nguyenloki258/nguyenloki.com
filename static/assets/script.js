@@ -4,7 +4,7 @@
 (function () {
     setTimeout(() => {
         window.botpressWebChat?.init({
-            host: 'https://aichatbot.bkholding.vn',
+            host: 'https://testchatbot.bkholding.vn',
             botId: 'smart-chatbots-covid',
             lazySocket: false
         })
