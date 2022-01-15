@@ -4,8 +4,8 @@
 (function () {
     setTimeout(() => {
         window.botpressWebChat?.init({
-            host: 'https://nieushop.com',
-            botId: 'bot-bk',
+            host: 'https://aichatbot.bkholding.vn',
+            botId: 'smart-chatbots-covid',
             lazySocket: false
         })
     }, 1000);
