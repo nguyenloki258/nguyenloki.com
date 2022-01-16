@@ -20,7 +20,7 @@ const IndexPage = ({
       <Helmet>
         <title>{site.siteMetadata.title}</title>
         <meta name="description" content={site.siteMetadata.description} />
-        <script src="https://testchatbot.bkholding.vn/assets/modules/channel-web/inject.js"></script>
+        <script src="https://chatbot.nguyenloki.com/assets/modules/channel-web/inject.js"></script>
         <script src="/assets/script.js"></script>
       </Helmet>
       <HeroHeader />

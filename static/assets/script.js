@@ -4,8 +4,8 @@
 (function () {
     setTimeout(() => {
         window.botpressWebChat?.init({
-            host: 'https://testchatbot.bkholding.vn',
-            botId: 'smart-chatbots-covid',
+            host: 'https://chatbot.nguyenloki.com',
+            botId: 'bot-bk',
             lazySocket: false
         })
     }, 1000);
